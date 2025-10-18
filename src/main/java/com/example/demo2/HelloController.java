@@ -74,6 +74,9 @@ public class HelloController {
         }
         else if( event.getCode() == KeyCode.DOWN){
             ball.setY( ball.getY() + 20 );
+            if(ball.getY() > pane.getHeight()){
+                ball.setY(0);
+            }
         }
         else if( event.getCode() == KeyCode.LEFT){
             ball.setX( ball.getX() - 20);
